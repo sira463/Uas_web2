@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 192.168.30.23
--- Generation Time: Dec 25, 2024 at 10:01 PM
+-- Generation Time: Dec 25, 2024 at 10:26 PM
 -- Server version: 8.0.18
 -- PHP Version: 8.2.26
 
@@ -87,7 +87,7 @@ CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `username` varchar(100) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `role` enum('admin','kasir','pelanggan') NOT NULL
+  `role` enum('admin','user','user_leader') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -96,8 +96,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `username`, `password`, `role`) VALUES
 (1, 'admin', '25e4ee4e9229397b6b17776bfceaf8e7', 'admin'),
-(2, 'user', '63e780c3f321d13109c71bf81805476e', 'kasir'),
-(3, 'leader_user', '482c811da5d5b4bc6d497ffa98491e38', 'pelanggan');
+(2, 'user', '63e780c3f321d13109c71bf81805476e', 'user'),
+(3, 'user_leader', '482c811da5d5b4bc6d497ffa98491e38', 'user_leader');
 
 --
 -- Indexes for dumped tables
