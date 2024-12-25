@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 192.168.30.23
--- Generation Time: Dec 25, 2024 at 09:17 PM
+-- Generation Time: Dec 25, 2024 at 10:01 PM
 -- Server version: 8.0.18
 -- PHP Version: 8.2.26
 
@@ -62,6 +62,8 @@ CREATE TABLE `transaksi` (
   `id_menu` int(11) NOT NULL,
   `harga` decimal(10,2) NOT NULL,
   `jumlah` int(11) NOT NULL,
+  `total_harga` decimal(10,2) NOT NULL,
+  `tanggal` date NOT NULL,
   `nama_menu` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -69,11 +71,11 @@ CREATE TABLE `transaksi` (
 -- Dumping data for table `transaksi`
 --
 
-INSERT INTO `transaksi` (`id_transaksi`, `id_user`, `id_menu`, `harga`, `jumlah`, `nama_menu`) VALUES
-(1, 2, 1, 20000.00, 2, 'Espresso'),
-(2, 2, 2, 25000.00, 1, 'Cappuccino'),
-(3, 2, 3, 22000.00, 3, 'Americano'),
-(4, 2, 4, 27000.00, 1, 'Latte');
+INSERT INTO `transaksi` (`id_transaksi`, `id_user`, `id_menu`, `harga`, `jumlah`, `total_harga`, `tanggal`, `nama_menu`) VALUES
+(1, 2, 1, 20000.00, 2, 40000.00, '2024-12-25', 'Espresso'),
+(2, 2, 2, 25000.00, 1, 25000.00, '2024-12-25', 'Cappuccino'),
+(3, 2, 3, 22000.00, 3, 66000.00, '2024-12-25', 'Americano'),
+(4, 2, 4, 27000.00, 1, 27000.00, '2024-12-25', 'Latte');
 
 -- --------------------------------------------------------
 
